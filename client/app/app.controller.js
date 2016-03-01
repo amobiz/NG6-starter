@@ -1,7 +1,7 @@
-class HomeController {
+class AppController {
   constructor($mdSidenav) {
     "ngInject";
-    this.name = 'home';
+    this.name = 'app';
     this.$mdSidenav = $mdSidenav;
   }
 
@@ -10,4 +10,4 @@ class HomeController {
   }
 }
 
-export default HomeController;
+export default AppController;

@@ -2,7 +2,7 @@
 
 .hero {
   background-color: var(--darkBgColor);
-  height: 50rem;
+  height: calc(100vh - 56px);
   padding: 3rem;
 
   & * {
