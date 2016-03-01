@@ -5,6 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-aria": "^1.5.0",
+    "angular-material": "^1.0.5",
     "angular-ui-router": "^0.2.15",
     "lodash": "^3.8.0",
     "normalize.css": "^3.0.3"
@@ -17,6 +20,7 @@
     "chai": "^3.4.0",
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.19.0",
+    "cssnano": "^3.5.2",
     "fs-walk": "0.0.1",
     "gulp": "^3.9.0",
     "gulp-rename": "^1.2.2",
@@ -33,10 +37,13 @@
     "mocha": "^2.3.0",
     "ng-annotate-loader": "0.0.10",
     "node-libs-browser": "^0.5.0",
+    "postcss": "^5.0.17",
+    "postcss-cssnext": "^2.4.0",
+    "postcss-import": "^8.0.2",
+    "postcss-loader": "^0.8.1",
     "raw-loader": "^0.5.1",
     "run-sequence": "^1.1.0",
     "style-loader": "^0.12.2",
-    "stylus-loader": "^1.1.1",
     "supports-color": "^3.1.2",
     "webpack": "^1.9.5",
     "webpack-dev-middleware": "^1.4.0",
@@ -49,6 +56,11 @@
   "keywords": [
     "angular",
     "webpack",
+	"postcss",
+	"material",
+	"material design",
+	"babel",
+	"es2015",
     "es6"
   ],
   "repository": {

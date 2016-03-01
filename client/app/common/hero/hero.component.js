@@ -1,6 +1,6 @@
 import template from './hero.html';
 import controller from './hero.controller';
-import './hero.styl';
+import './hero.css';
 
 let heroComponent = {
   restrict: 'E',
