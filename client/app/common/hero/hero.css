@@ -1,0 +1,11 @@
+@import '../common';
+
+.hero {
+  background-color: var(--darkBgColor);
+  height: 50rem;
+  padding: 3rem;
+
+  & * {
+    color: var(--lightTextColor);
+  }
+}
