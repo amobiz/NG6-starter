@@ -1,4 +1,21 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
-<div class="app">
-  <div ui-view></div>
+<div class="app" flex layout="column">
+  <md-toolbar layout="row" class="md-whiteframe-z2">
+    <md-button class="menu" hide-gt-sm ng-click="vm.toggleMenu()" aria-label="Show Menu">
+      <md-icon md-svg-icon="menu" ></md-icon>
+    </md-button>
+    <h1 class="title">Angular Material - Starter App</h1>
+  </md-toolbar>
+
+  <div flex layout="row">
+
+      <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left" layout="column">
+        <menu></menu>
+      </md-sidenav>
+
+      <md-content flex id="content">
+        <div ui-view></div>
+      </md-content>
+
+  </div>
 </div>
