@@ -1,9 +1,27 @@
-<navbar></navbar>
-<header>
-  <hero></hero>
-</header>
-<main>
-  <div>
-    <h1>Found in {{ vm.name }}.html</h1>
+<div flex layout="column">
+
+  <md-toolbar layout="row" class="md-whiteframe-z2">
+    <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show Menu">
+      <md-icon md-svg-icon="menu" ></md-icon>
+    </md-button>
+    <h1>Angular Material - Starter App</h1>
+  </md-toolbar>
+
+  <div flex layout="row">
+
+      <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left" layout="column">
+      </md-sidenav>
+
+      <md-content flex id="content">
+        <header>
+          <hero></hero>
+        </header>
+        <main>
+          <div>
+            <h1>Found in {{ vm.name }}.html</h1>
+          </div>
+        </main>
+      </md-content>
+
   </div>
-</main>
+</div>
