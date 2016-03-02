@@ -1,16 +1,16 @@
-import MenuModule from './menu'
-import MenuController from './menu.controller';
-import MenuComponent from './menu.component';
-import MenuTemplate from './menu.html';
+import SettingsModule from './settings'
+import SettingsController from './settings.controller';
+import SettingsComponent from './settings.component';
+import SettingsTemplate from './settings.html';
 
-describe('Menu', () => {
+describe('Settings', () => {
   let $rootScope, makeController;
 
-  beforeEach(window.module(MenuModule.name));
+  beforeEach(window.module(SettingsModule.name));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
-      return new MenuController();
+      return new SettingsController();
     };
   }));
 
@@ -30,16 +30,16 @@ describe('Menu', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
     it('has name in template [REMOVE]', () => {
-      expect(MenuTemplate).to.match(/{{\s?vm\.name\s?}}/g);
+      expect(SettingsTemplate).to.match(/{{\s?vm\.name\s?}}/g);
     });
   });
 
   describe('Component', () => {
       // component/directive specs
-      let component = MenuComponent;
+      let component = SettingsComponent;
 
       it('includes the intended template',() => {
-        expect(component.template).to.equal(MenuTemplate);
+        expect(component.template).to.equal(SettingsTemplate);
       });
 
       it('uses `controllerAs` syntax', () => {
@@ -47,7 +47,7 @@ describe('Menu', () => {
       });
 
       it('invokes the right controller', () => {
-        expect(component.controller).to.equal(MenuController);
+        expect(component.controller).to.equal(SettingsController);
       });
   });
 });

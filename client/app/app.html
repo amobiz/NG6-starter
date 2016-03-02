@@ -1,6 +1,6 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
 <div class="app" flex layout="column">
-  <md-toolbar layout="row" class="md-whiteframe-z2">
+  <md-toolbar layout="row" class="header md-whiteframe-z2">
     <md-button class="menu" hide-gt-sm ng-click="vm.toggleMenu()" aria-label="Show Menu">
       <md-icon md-svg-icon="menu" ></md-icon>
     </md-button>
@@ -9,13 +9,20 @@
 
   <div flex layout="row">
 
-      <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left" layout="column">
-        <menu></menu>
-      </md-sidenav>
+    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left" layout="column">
+      <md-toolbar layout="row" class="md-whiteframe-z2 md-tall md-hue-2">
+      </md-toolbar>
+      <md-list class="menu">
+        <md-list-item ng-click="vm.toggleMenu()" ui-sref="home"><div><md-icon md-svg-icon="home" class="md-avatar-icon"></md-icon>Home</div></md-list-item>
+        <md-list-item ng-click="vm.toggleMenu()" ui-sref="about"><div><md-icon md-svg-icon="about" class="md-avatar-icon"></md-icon>About</div></md-list-item>
+        <md-divider></md-divider>
+        <md-list-item ng-click="vm.toggleMenu()" ui-sref="settings"><div><md-icon md-svg-icon="settings" class="md-avatar-icon"></md-icon>Settings</div></md-list-item>
+      </md-list>
+    </md-sidenav>
 
-      <md-content flex id="content">
-        <div ui-view></div>
-      </md-content>
+    <md-content flex id="content">
+      <div ui-view></div>
+    </md-content>
 
   </div>
 </div>

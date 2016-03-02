@@ -4,7 +4,7 @@
   height: 100%;
   background-color: var(--lightBgColor);
 
-  & md-toolbar {
+  & .header {
     height: 56px;
     min-height: 56px;
   }
