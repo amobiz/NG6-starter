@@ -5,8 +5,8 @@
   background-color: var(--lightBgColor);
 
   & .header {
-    height: 56px;
-    min-height: 56px;
+    height: var(--headerHeight);
+    min-height: var(--headerHeight);
   }
 
   & .title {

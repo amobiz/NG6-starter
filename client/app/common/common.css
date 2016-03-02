@@ -8,6 +8,8 @@
   --lightBgColor: #37474f;
   --lightTextColor: #f5f5f5;
   --darkTextColor: #212121;
+
+  --headerHeight: 56px;
 }
 
 body {
