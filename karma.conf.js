@@ -44,7 +44,19 @@ module.exports = function (config) {
 					}),
 					require('postcss-bem'),
 					require('postcss-cssnext'),
-					require('cssnano'),
+					/*
+					 disable z-index optimization related to this issue:
+
+					 Disable unsafe rules by default
+					 https://github.com/ben-eb/cssnano/issues/28
+					 This plugin change z-index!
+					 https://github.com/ben-eb/gulp-cssnano/issues/8
+
+					 Cause:
+					 angular-material pragmatically set .md-scroll-mask's z-index to 50,
+					 whereas cssnano optimizing .md-open-menu-container's z-index below 50, making it no response.
+					 */
+					require('cssnano')({ zindex: false })
 				];
 			}
 		},

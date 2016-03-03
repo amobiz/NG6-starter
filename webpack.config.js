@@ -19,7 +19,7 @@ module.exports = {
 			}),
 			require('postcss-bem'),
 			require('postcss-cssnext'),
-			require('cssnano'),
+			require('cssnano')({ zindex: false })
 		];
 	},
 	plugins: [
