@@ -17,6 +17,7 @@ module.exports = {
 			require('postcss-import')({
 				addDependencyTo: webpack
 			}),
+			require('postcss-bem'),
 			require('postcss-cssnext'),
 			require('cssnano'),
 		];
