@@ -9,7 +9,16 @@ module.exports = {
 		loaders: [
 			{ test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
 			{ test: /\.html$/, loader: 'raw' },
-			{ test: /\.css$/, loader: "style-loader!css-loader!postcss-loader" }
+			{ test: /\.css$/, loader: "style-loader!css-loader!postcss-loader" },
+			{ test: /\.svg$/, loaders: [
+				"url",
+				'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+			]},
+			{ test: /\.(jpe?g|png|gif)$/i, loaders: [
+				'file?hash=sha512&digest=hex&name=[hash].[ext]',
+				'url?limit=25000',
+				'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+			]}
 		]
 	},
 	postcss: function () {
