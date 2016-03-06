@@ -1,6 +1,7 @@
 class AppController {
   constructor($mdSidenav) {
-    "ngInject";
+    'ngInject';
+
     this.name = 'app';
     this.$mdSidenav = $mdSidenav;
   }

@@ -2,11 +2,11 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import settingsComponent from './settings.component';
 
-let settingsModule = angular.module('settings', [
+let settingsModule = angular.module('app.components.settings', [
   uiRouter
 ])
 .config(($stateProvider) => {
-  "ngInject";
+  'ngInject';
 
   $stateProvider
     .state('settings', {
