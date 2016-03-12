@@ -6,7 +6,6 @@ import ngMaterial from 'angular-material';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
-import 'normalize.css';
 
 const URL_ICON_MENU = 'app/assets/menu.svg';
 const URL_ICON_HOME = 'app/assets/ic_home_black_24px.svg';
